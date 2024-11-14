@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar />
+    <nav-bar/>
     <nuxt />
   </div>
 </template>
@@ -10,6 +10,18 @@ import NavBar from '~/components/NavBar.vue'
 export default {
   components: {
     NavBar
+  },
+  head() {
+    return {
+      titleTemplate: '%s - Real Wordl Events',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Where you can find all the events taking place in your neighborhood'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -32,6 +44,11 @@ body {
   padding: 0 20px 20px;
   margin: 0 auto;
 }
+
+img {
+  border-radius: 10px;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
